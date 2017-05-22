@@ -10,7 +10,7 @@ class Todo {
     private var _title: String = ""
 
     var title: String
-        get() = this.toString()
+        get() = _title
         set(value) {
             _title = value
         }
