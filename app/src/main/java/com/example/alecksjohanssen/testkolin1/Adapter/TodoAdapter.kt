@@ -23,9 +23,7 @@ class TodoAdapter(context: Context, todos: ArrayList<Todo>) : RecyclerView.Adapt
         mContext = context
     }
 
-    fun getContext() : Context {
-        return mContext;
-    }
+
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         var todo: Todo = mTodos[position]
         val textView = holder.mTodoEditTextView

@@ -9,14 +9,10 @@ import com.example.alecksjohanssen.testkolin1.Adapter.TodoAdapter
 import com.example.alecksjohanssen.testkolin1.Model.Todo
 
 class MainActivity : AppCompatActivity() {
-
+    private val result = Todo()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val result = Todo()
-        result.title = "Cheeseburger"
-        result.description = "Go have some breakfast"
-        result.addTodo(result)
         // Example of a call to a native method
         //val tv = findViewById(R.id.sample_text) as TextView
         //tv.text = stringFromJNI()
@@ -46,16 +42,9 @@ class MainActivity : AppCompatActivity() {
 //    }
 
     fun newTodo() {
-        System.out.println("Hello World")
-        val result = Todo()
         result.title = "Cheeseburger"
         result.description = "Go have some breakfast"
         result.addTodo(result)
-        System.out.println("Cyka Blyat")
-        result.getAllTodo().forEachIndexed { index, todo ->
-            System.out.println(todo.title)
-        }
     }
-
 }
 
