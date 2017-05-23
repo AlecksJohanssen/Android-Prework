@@ -5,6 +5,7 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import com.example.alecksjohanssen.testkolin1.Model.Todo
@@ -26,7 +27,7 @@ class TodoAdapter(context: Context, todos: ArrayList<Todo>) : RecyclerView.Adapt
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         var todo: Todo = mTodos[position]
-        val textView = holder.mTodoEditTextView
+        val textView = holder.mTodoTextView
         textView.text = todo.title
 
     }
@@ -43,7 +44,8 @@ class TodoAdapter(context: Context, todos: ArrayList<Todo>) : RecyclerView.Adapt
     }
 
      class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-         val mTodoEditTextView: TextView = itemView.findViewById(R.id.tvTitle) as TextView
+         val mTodoTextView: TextView = itemView.findViewById(R.id.tvTitle) as TextView
+
     }
 
 
