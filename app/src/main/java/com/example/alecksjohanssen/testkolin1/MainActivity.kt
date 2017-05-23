@@ -29,22 +29,27 @@ class MainActivity : AppCompatActivity() {
         rvTodos.layoutManager = LinearLayoutManager(this) as RecyclerView.LayoutManager
         rvTodos.adapter = adapter
         newTodo()
+        System.out.println("Cyka")
+        System.out.println(intFromJNI().toString())
+
     }
 
     /**
      * A native method that is implemented by the 'native-lib' native library,
      * which is packaged with this application.
      */
-    // external fun stringFromJNI(): String
+    external fun intFromJNI(): Int
 
-//    companion object {
-//
-//        // Used to load the 'native-lib' library on application startup.
-//        init {
-//            System.loadLibrary("native-lib")
-//
-//        }
-//    }
+    companion object {
+
+        // Used to load the 'native-lib' library on application startup.
+        init {
+            System.loadLibrary("native-lib")
+
+        }
+    }
+
+
 
     fun submitTodo(data: String) {
         result.title = data
